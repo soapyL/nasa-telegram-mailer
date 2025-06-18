@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+fetch('https://api.nasa.gov/planetary/apod?api_key=0uxcBdh7eC8V4hLX1BQs8KoEp3ZEpZdG8VzhLEGZ')
+.then((response) => response.json())
+.then((data) => {
+	const img = document.createElement('img');
+	img.src = data.hdurl;
+	document.body.appendChild(img);
+})
+.catch((error) => console.error('Oops:', error));
+</script>
+</body>
+</html>
